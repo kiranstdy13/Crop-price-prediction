@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+venv/
+ENV/
+
+# Build artifacts
+dist/
+frontend/dist/
+build/
+
+# Temporary / duplicate copies
+crop_price_prediction_mini - Copy/
+crop_price_prediction_mini - Copy (2)/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

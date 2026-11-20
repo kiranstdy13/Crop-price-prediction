@@ -1,0 +1,323 @@
+{
+  "model_version": "v1.0.0",
+  "trained_at": "2026-11-19T10:55:39.657974",
+  "state": "Karnataka",
+  "supported_crops": [
+    "Cabbage",
+    "Green Chilli",
+    "Groundnut",
+    "Maize",
+    "Onion",
+    "Potato",
+    "Rice",
+    "Tomato"
+  ],
+  "supported_markets": [
+    "Bengaluru",
+    "Hubballi",
+    "Mandya",
+    "Mysuru"
+  ],
+  "horizons": [
+    7,
+    15,
+    30
+  ],
+  "features": {
+    "categorical": [
+      "commodity",
+      "market",
+      "season"
+    ],
+    "numerical": [
+      "month",
+      "price_lag_1",
+      "price_lag_7",
+      "price_lag_15",
+      "price_lag_30",
+      "price_ma_7",
+      "price_ma_15",
+      "price_ma_30",
+      "price_volatility_7",
+      "market_arrivals",
+      "arrivals_lag_1",
+      "arrivals_ma_7",
+      "arrivals_change_7d",
+      "rainfall",
+      "temperature",
+      "humidity"
+    ],
+    "all": [
+      "commodity",
+      "market",
+      "season",
+      "month",
+      "price_lag_1",
+      "price_lag_7",
+      "price_lag_15",
+      "price_lag_30",
+      "price_ma_7",
+      "price_ma_15",
+      "price_ma_30",
+      "price_volatility_7",
+      "market_arrivals",
+      "arrivals_lag_1",
+      "arrivals_ma_7",
+      "arrivals_change_7d",
+      "rainfall",
+      "temperature",
+      "humidity"
+    ]
+  },
+  "evaluation": {
+    "7d": {
+      "horizon_days": 7,
+      "test_sample_size": 11456,
+      "baseline": {
+        "MAE": 43.81,
+        "RMSE": 60.18,
+        "R2": 0.9975
+      },
+      "random_forest": {
+        "MAE": 38.33,
+        "RMSE": 52.19,
+        "R2": 0.9981
+      },
+      "xgboost": {
+        "MAE": 38.4,
+        "RMSE": 52.03,
+        "R2": 0.9981
+      },
+      "crop_wise_xgboost": {
+        "Cabbage": {
+          "MAE": 19.63,
+          "RMSE": 24.6,
+          "R2": 0.9584
+        },
+        "Green Chilli": {
+          "MAE": 47.58,
+          "RMSE": 59.47,
+          "R2": 0.9685
+        },
+        "Groundnut": {
+          "MAE": 73.1,
+          "RMSE": 91.57,
+          "R2": 0.9735
+        },
+        "Maize": {
+          "MAE": 32.49,
+          "RMSE": 40.35,
+          "R2": 0.9669
+        },
+        "Onion": {
+          "MAE": 32.64,
+          "RMSE": 41.71,
+          "R2": 0.9655
+        },
+        "Potato": {
+          "MAE": 26.81,
+          "RMSE": 33.9,
+          "R2": 0.957
+        },
+        "Rice": {
+          "MAE": 43.86,
+          "RMSE": 55.59,
+          "R2": 0.965
+        },
+        "Tomato": {
+          "MAE": 31.11,
+          "RMSE": 39.06,
+          "R2": 0.9538
+        }
+      },
+      "market_wise_xgboost": {
+        "Bengaluru": {
+          "MAE": 40.65,
+          "RMSE": 56.22,
+          "R2": 0.998
+        },
+        "Hubballi": {
+          "MAE": 37.37,
+          "RMSE": 49.73,
+          "R2": 0.9981
+        },
+        "Mandya": {
+          "MAE": 39.16,
+          "RMSE": 53.52,
+          "R2": 0.9981
+        },
+        "Mysuru": {
+          "MAE": 36.44,
+          "RMSE": 48.28,
+          "R2": 0.9983
+        }
+      }
+    },
+    "15d": {
+      "horizon_days": 15,
+      "test_sample_size": 11200,
+      "baseline": {
+        "MAE": 43.65,
+        "RMSE": 59.42,
+        "R2": 0.9976
+      },
+      "random_forest": {
+        "MAE": 40.07,
+        "RMSE": 54.56,
+        "R2": 0.9979
+      },
+      "xgboost": {
+        "MAE": 41.26,
+        "RMSE": 55.69,
+        "R2": 0.9979
+      },
+      "crop_wise_xgboost": {
+        "Cabbage": {
+          "MAE": 20.98,
+          "RMSE": 26.49,
+          "R2": 0.9515
+        },
+        "Green Chilli": {
+          "MAE": 50.49,
+          "RMSE": 63.2,
+          "R2": 0.964
+        },
+        "Groundnut": {
+          "MAE": 78.15,
+          "RMSE": 97.92,
+          "R2": 0.9692
+        },
+        "Maize": {
+          "MAE": 36.19,
+          "RMSE": 44.72,
+          "R2": 0.9585
+        },
+        "Onion": {
+          "MAE": 35.9,
+          "RMSE": 45.75,
+          "R2": 0.959
+        },
+        "Potato": {
+          "MAE": 27.85,
+          "RMSE": 34.86,
+          "R2": 0.9547
+        },
+        "Rice": {
+          "MAE": 47.44,
+          "RMSE": 58.84,
+          "R2": 0.9597
+        },
+        "Tomato": {
+          "MAE": 33.06,
+          "RMSE": 41.85,
+          "R2": 0.9478
+        }
+      },
+      "market_wise_xgboost": {
+        "Bengaluru": {
+          "MAE": 43.14,
+          "RMSE": 59.61,
+          "R2": 0.9978
+        },
+        "Hubballi": {
+          "MAE": 41.02,
+          "RMSE": 54.11,
+          "R2": 0.9977
+        },
+        "Mandya": {
+          "MAE": 40.52,
+          "RMSE": 55.83,
+          "R2": 0.9979
+        },
+        "Mysuru": {
+          "MAE": 40.35,
+          "RMSE": 52.96,
+          "R2": 0.998
+        }
+      }
+    },
+    "30d": {
+      "horizon_days": 30,
+      "test_sample_size": 10720,
+      "baseline": {
+        "MAE": 43.72,
+        "RMSE": 60.23,
+        "R2": 0.9975
+      },
+      "random_forest": {
+        "MAE": 41.51,
+        "RMSE": 56.63,
+        "R2": 0.9978
+      },
+      "xgboost": {
+        "MAE": 43.88,
+        "RMSE": 58.65,
+        "R2": 0.9976
+      },
+      "crop_wise_xgboost": {
+        "Cabbage": {
+          "MAE": 21.17,
+          "RMSE": 26.46,
+          "R2": 0.9501
+        },
+        "Green Chilli": {
+          "MAE": 55.27,
+          "RMSE": 68.84,
+          "R2": 0.9552
+        },
+        "Groundnut": {
+          "MAE": 77.09,
+          "RMSE": 97.86,
+          "R2": 0.9682
+        },
+        "Maize": {
+          "MAE": 36.78,
+          "RMSE": 46.53,
+          "R2": 0.9529
+        },
+        "Onion": {
+          "MAE": 41.7,
+          "RMSE": 51.81,
+          "R2": 0.9481
+        },
+        "Potato": {
+          "MAE": 29.79,
+          "RMSE": 37.51,
+          "R2": 0.9467
+        },
+        "Rice": {
+          "MAE": 52.17,
+          "RMSE": 64.61,
+          "R2": 0.9486
+        },
+        "Tomato": {
+          "MAE": 37.07,
+          "RMSE": 45.53,
+          "R2": 0.9401
+        }
+      },
+      "market_wise_xgboost": {
+        "Bengaluru": {
+          "MAE": 46.33,
+          "RMSE": 61.35,
+          "R2": 0.9976
+        },
+        "Hubballi": {
+          "MAE": 42.45,
+          "RMSE": 56.12,
+          "R2": 0.9975
+        },
+        "Mandya": {
+          "MAE": 43.62,
+          "RMSE": 59.25,
+          "R2": 0.9976
+        },
+        "Mysuru": {
+          "MAE": 43.12,
+          "RMSE": 57.76,
+          "R2": 0.9976
+        }
+      }
+    }
+  }
+}
